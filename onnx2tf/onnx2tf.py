@@ -1424,7 +1424,6 @@ def convert(
         )
         converter.target_spec.supported_ops = [
             tf.lite.OpsSet.TFLITE_BUILTINS,
-            tf.lite.OpsSet.SELECT_TF_OPS,
         ]
         converter.unfold_batchmatmul = enable_batchmatmul_unfold
         tflite_model = converter.convert()
@@ -1450,7 +1449,6 @@ def convert(
         converter.target_spec.supported_types = [tf.float16]
         converter.target_spec.supported_ops = [
             tf.lite.OpsSet.TFLITE_BUILTINS,
-            tf.lite.OpsSet.SELECT_TF_OPS,
         ]
 
         if enable_accumulation_type_float16:
@@ -1501,7 +1499,6 @@ def convert(
                 converter.target_spec.supported_types = []
                 converter.target_spec.supported_ops = [
                     tf.lite.OpsSet.TFLITE_BUILTINS,
-                    tf.lite.OpsSet.SELECT_TF_OPS,
                 ]
                 converter._experimental_disable_per_channel = disable_per_channel
                 converter.unfold_batchmatmul = enable_batchmatmul_unfold
@@ -1669,7 +1666,6 @@ def convert(
                 converter.optimizations = [tf.lite.Optimize.DEFAULT]
                 converter.target_spec.supported_ops = [
                     tf.lite.OpsSet.TFLITE_BUILTINS_INT8,
-                    tf.lite.OpsSet.SELECT_TF_OPS,
                 ]
                 converter._experimental_disable_per_channel = disable_per_channel
                 converter.unfold_batchmatmul = enable_batchmatmul_unfold
@@ -1697,7 +1693,6 @@ def convert(
                 converter.optimizations = [tf.lite.Optimize.DEFAULT]
                 converter.target_spec.supported_ops = [
                     tf.lite.OpsSet.TFLITE_BUILTINS_INT8,
-                    tf.lite.OpsSet.SELECT_TF_OPS,
                 ]
                 converter._experimental_disable_per_channel = disable_per_channel
                 converter.unfold_batchmatmul = enable_batchmatmul_unfold
@@ -1754,7 +1749,6 @@ def convert(
                 converter.target_spec.supported_types = []
                 converter.target_spec.supported_ops = [
                     tf.lite.OpsSet.EXPERIMENTAL_TFLITE_BUILTINS_ACTIVATIONS_INT16_WEIGHTS_INT8,
-                    tf.lite.OpsSet.SELECT_TF_OPS,
                 ]
                 converter._experimental_disable_per_channel = disable_per_channel
                 converter.unfold_batchmatmul = enable_batchmatmul_unfold
@@ -1787,7 +1781,6 @@ def convert(
                 converter.target_spec.supported_types = []
                 converter.target_spec.supported_ops = [
                     tf.lite.OpsSet.EXPERIMENTAL_TFLITE_BUILTINS_ACTIVATIONS_INT16_WEIGHTS_INT8,
-                    tf.lite.OpsSet.SELECT_TF_OPS,
                 ]
                 converter._experimental_disable_per_channel = disable_per_channel
                 converter.unfold_batchmatmul = enable_batchmatmul_unfold
